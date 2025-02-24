@@ -6,6 +6,8 @@ From what we can see, from "Atif Aziz" CommandLineToArgvW having 0 fails, C#/.NE
 
 The next best thing is "CS. (467313)" and "Mikescher (No caret handling)". "Mikescher (No caret handling)" is the winner here IMO, since it can also easily support cmd.exe caret handling (as it originally does in stackoverflow).
 
+You could say that CommandLineToArgvW is the winner, BUT it is not C# code and not portable. Also CommandLineToArgvW has some special/weird logic for the first argument (the program itself).
+
 <pre>
 Runs: 16225
 User: Atif Aziz (749653) fails: 0
