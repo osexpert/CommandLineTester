@@ -1,6 +1,6 @@
 # CommandLineTester
 
-Test how C#/.NET command line splitter compares to various splitters here: https://stackoverflow.com/questions/298830/split-string-containing-command-line-parameters-into-string-in-c-sharp
+Test how C#/.NET command line splitting compares to various splitters here: https://stackoverflow.com/questions/298830/split-string-containing-command-line-parameters-into-string-in-c-sharp
 
 From what we can see, from "Atif Aziz" CommandLineToArgvW, C#/.NET on Windows uses shell32.dll CommandLineToArgvW to split the command line. On Linux, I don't know.
 
