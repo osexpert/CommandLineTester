@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.CommandLine.Parsing;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Runtime.InteropServices;
@@ -45,6 +46,13 @@ namespace test
             Register("DilipNannaware (59131568)", DilipNannaware);
             Register("Mikescher (this)", Mikescher);
             Register("Mikescher (No caret handling)", MikescherDontHandleCaret);
+            Register("System.CommandLine.Parser", System_CommandLine_Parser);
+        }
+
+        private IEnumerable<string> System_CommandLine_Parser(string s)
+        {
+            var cliArgs = CommandLineStringSplitter.Instance.Split(s).ToArray();
+            return cliArgs;
         }
 
         List<(string, Func<string, IEnumerable<string>>)> reg = new();
