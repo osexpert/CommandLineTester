@@ -1,5 +1,11 @@
 # CommandLineTester
 
+Test how C#/.NET command line splitter compares to various splitters here: https://stackoverflow.com/questions/298830/split-string-containing-command-line-parameters-into-string-in-c-sharp
+
+From what we can see, from "Atif Aziz" CommandLineToArgvW, C#/.NET on Windows uses shell32.dll CommandLineToArgvW to split the command line. On Linux, I don't know.
+
+The next best thing is "CS. (467313)", "Mikescher (No caret handling)". "Mikescher (No caret handling)" is the winner here IMO, since the code is short and clean, and the code can also easily support cmd.exe caret handling (as it originally does in stackoverflow).
+
 <pre>
 Runs: 16225
 User: Atif Aziz (749653) fails: 0
